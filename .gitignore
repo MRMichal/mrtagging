@@ -1,3 +1,6 @@
 # patented #
 ############
 mrcalc_harp.*
+
+# other #
+.gitignore
