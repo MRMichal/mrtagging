@@ -3,6 +3,8 @@ function mrcalc_harp_batch( inDir )
 %   Detailed explanation goes here
 %   author: Konrad Werys (konradwerys@gmail.com)
 
+addpath(fullfile('..','mrtoolbox'))
+
 dirs = get_all_dirs(inDir);
 nDirs=size(dirs,1);
 k=0;
@@ -29,7 +31,7 @@ for iDir=1:nDirs
             load(mrDataPath,'-mat')
             load(dcmDataPath,'-mat')
             
-            tagSpacing = [8 8];
+            tagSpacing = [6 6];
             pixelSpacing = dcmTags{1}.PixelSpacing';
             gridAngle = pi/4;
             filterRadius = 7;
